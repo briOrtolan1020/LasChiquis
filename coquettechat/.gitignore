@@ -1,0 +1,21 @@
+# dependencias
+node_modules/
+
+# builds
+dist/
+build/
+release/
+
+# archivos de entorno
+.env
+.env.*
+
+# logs
+*.log
+
+# uploads
+uploads/
+data/uploads/
+
+# electron
+*.exe

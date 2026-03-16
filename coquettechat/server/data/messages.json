@@ -1,0 +1,45 @@
+[
+  {
+    "id": "1773412511121",
+    "from": "jenifer",
+    "to": null,
+    "chatType": "group",
+    "chatId": "group:oficina",
+    "text": "",
+    "attachment": {
+      "type": "file",
+      "fileName": "C0AA72EF-4E74-4B08-A47E-9511C4CD8FD3.pdf",
+      "mimeType": "application/pdf",
+      "size": 4261,
+      "url": "http://localhost:4000/uploads/1773412511099-C0AA72EF-4E74-4B08-A47E-9511C4CD8FD3.pdf"
+    },
+    "createdAt": "2026-03-13T14:35:11.121Z",
+    "time": "11:35 a. m.",
+    "readBy": [
+      "jenifer",
+      "brisa",
+      "lucia"
+    ]
+  },
+  {
+    "id": "1773412516002",
+    "from": "jenifer",
+    "to": "lucia",
+    "chatType": "private",
+    "chatId": "jenifer:lucia:private",
+    "text": "",
+    "attachment": {
+      "type": "file",
+      "fileName": "package-lock.json",
+      "mimeType": "application/json",
+      "size": 197156,
+      "url": "http://localhost:4000/uploads/1773412515970-package-lock.json"
+    },
+    "createdAt": "2026-03-13T14:35:16.002Z",
+    "time": "11:35 a. m.",
+    "readBy": [
+      "jenifer",
+      "lucia"
+    ]
+  }
+]
