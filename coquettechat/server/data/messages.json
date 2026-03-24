@@ -59,7 +59,9 @@
     "createdAt": "2026-03-24T13:33:32.731Z",
     "time": "10:33 a. m.",
     "readBy": [
-      "brisa"
+      "brisa",
+      "lucia",
+      "jenifer"
     ]
   },
   {
@@ -73,7 +75,9 @@
     "createdAt": "2026-03-24T13:35:01.769Z",
     "time": "10:35 a. m.",
     "readBy": [
-      "brisa"
+      "brisa",
+      "lucia",
+      "jenifer"
     ]
   },
   {
@@ -93,7 +97,9 @@
     "createdAt": "2026-03-24T13:47:52.608Z",
     "time": "10:47 a. m.",
     "readBy": [
-      "brisa"
+      "brisa",
+      "lucia",
+      "jenifer"
     ]
   },
   {
@@ -113,7 +119,9 @@
     "createdAt": "2026-03-24T13:47:58.191Z",
     "time": "10:47 a. m.",
     "readBy": [
-      "brisa"
+      "brisa",
+      "lucia",
+      "jenifer"
     ]
   },
   {
@@ -127,7 +135,9 @@
     "createdAt": "2026-03-24T13:48:51.431Z",
     "time": "10:48 a. m.",
     "readBy": [
-      "brisa"
+      "brisa",
+      "lucia",
+      "jenifer"
     ]
   },
   {
@@ -147,7 +157,8 @@
     "createdAt": "2026-03-24T13:49:04.476Z",
     "time": "10:49 a. m.",
     "readBy": [
-      "brisa"
+      "brisa",
+      "lucia"
     ]
   },
   {
@@ -161,7 +172,8 @@
     "createdAt": "2026-03-24T13:49:15.354Z",
     "time": "10:49 a. m.",
     "readBy": [
-      "brisa"
+      "brisa",
+      "lucia"
     ]
   }
 ]

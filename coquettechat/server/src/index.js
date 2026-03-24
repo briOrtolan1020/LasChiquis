@@ -9,10 +9,29 @@ const path = require("path");
 const app = express();
 const server = http.createServer(app);
 
-const PORT = 4000;
-const CLIENT_ORIGIN = "http://localhost:5174";
+const PORT = process.env.PORT || 4000;
 
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://127.0.0.1:5173",
+  "http://127.0.0.1:5174",
+  "https://coquettechat-client-chiquis.vercel.app",
+];
+
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error(`No permitido por CORS: ${origin}`));
+    },
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 const dataDir = path.join(__dirname, "..", "data");
@@ -35,23 +54,36 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+function getBaseUrl(req) {
+  return `${req.protocol}://${req.get("host")}`;
+}
+
 app.post("/upload", upload.single("file"), (req, res) => {
-  if (!req.file) {
-    return res.status(400).json({ error: "No se recibió ningún archivo." });
+  try {
+    if (!req.file) {
+      return res.status(400).json({ ok: false, error: "No se recibió ningún archivo." });
+    }
+
+    const isImage = req.file.mimetype.startsWith("image/");
+    const baseUrl = getBaseUrl(req);
+
+    return res.json({
+      ok: true,
+      attachment: {
+        type: isImage ? "image" : "file",
+        fileName: req.file.originalname,
+        mimeType: req.file.mimetype,
+        size: req.file.size,
+        url: `${baseUrl}/uploads/${req.file.filename}`,
+      },
+    });
+  } catch (error) {
+    console.error("Error en /upload:", error);
+    return res.status(500).json({
+      ok: false,
+      error: "Error subiendo archivo.",
+    });
   }
-
-  const isImage = req.file.mimetype.startsWith("image/");
-
-  res.json({
-    ok: true,
-    attachment: {
-      type: isImage ? "image" : "file",
-      fileName: req.file.originalname,
-      mimeType: req.file.mimetype,
-      size: req.file.size,
-      url: `http://localhost:${PORT}/uploads/${req.file.filename}`,
-    },
-  });
 });
 
 app.get("/health", (_req, res) => {
@@ -60,8 +92,14 @@ app.get("/health", (_req, res) => {
 
 const io = new Server(server, {
   cors: {
-    origin: true,
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error(`No permitido por CORS: ${origin}`));
+    },
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
@@ -138,6 +176,7 @@ io.on("connection", (socket) => {
 
   socket.on("register_user", (userId) => {
     if (!userId) return;
+
     onlineUsers.set(userId, socket.id);
     socket.data.userId = userId;
 
@@ -228,5 +267,5 @@ io.on("connection", (socket) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
