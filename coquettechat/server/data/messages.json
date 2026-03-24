@@ -41,5 +41,127 @@
       "jenifer",
       "lucia"
     ]
+  },
+  {
+    "id": "1774359212730",
+    "from": "brisa",
+    "to": null,
+    "chatType": "group",
+    "chatId": "group:oficina",
+    "text": "",
+    "attachment": {
+      "type": "file",
+      "fileName": "Alvarez recibo .pdf",
+      "mimeType": "application/pdf",
+      "size": 502080,
+      "url": "http://localhost:4000/uploads/1774359212713-Alvarez_recibo_.pdf"
+    },
+    "createdAt": "2026-03-24T13:33:32.731Z",
+    "time": "10:33 a. m.",
+    "readBy": [
+      "brisa"
+    ]
+  },
+  {
+    "id": "1774359301769",
+    "from": "brisa",
+    "to": null,
+    "chatType": "group",
+    "chatId": "group:oficina",
+    "text": "holis",
+    "attachment": null,
+    "createdAt": "2026-03-24T13:35:01.769Z",
+    "time": "10:35 a. m.",
+    "readBy": [
+      "brisa"
+    ]
+  },
+  {
+    "id": "1774360072608",
+    "from": "brisa",
+    "to": null,
+    "chatType": "group",
+    "chatId": "group:oficina",
+    "text": "",
+    "attachment": {
+      "type": "image",
+      "fileName": "WhatsApp Image 2026-03-20 at 10.32.00 AM.jpeg",
+      "mimeType": "image/jpeg",
+      "size": 42830,
+      "url": "http://localhost:4000/uploads/1774360072594-WhatsApp_Image_2026-03-20_at_10.32.00_AM.jpeg"
+    },
+    "createdAt": "2026-03-24T13:47:52.608Z",
+    "time": "10:47 a. m.",
+    "readBy": [
+      "brisa"
+    ]
+  },
+  {
+    "id": "1774360078191",
+    "from": "brisa",
+    "to": null,
+    "chatType": "group",
+    "chatId": "group:oficina",
+    "text": "",
+    "attachment": {
+      "type": "file",
+      "fileName": "recibo Alvarez .pdf",
+      "mimeType": "application/pdf",
+      "size": 349484,
+      "url": "http://localhost:4000/uploads/1774360078175-recibo_Alvarez_.pdf"
+    },
+    "createdAt": "2026-03-24T13:47:58.191Z",
+    "time": "10:47 a. m.",
+    "readBy": [
+      "brisa"
+    ]
+  },
+  {
+    "id": "1774360131431",
+    "from": "brisa",
+    "to": null,
+    "chatType": "group",
+    "chatId": "group:oficina",
+    "text": "🥺",
+    "attachment": null,
+    "createdAt": "2026-03-24T13:48:51.431Z",
+    "time": "10:48 a. m.",
+    "readBy": [
+      "brisa"
+    ]
+  },
+  {
+    "id": "1774360144474",
+    "from": "brisa",
+    "to": "lucia",
+    "chatType": "private",
+    "chatId": "brisa:lucia:private",
+    "text": "",
+    "attachment": {
+      "type": "image",
+      "fileName": "WhatsApp Image 2026-03-20 at 10.32.00 AM.jpeg",
+      "mimeType": "image/jpeg",
+      "size": 42830,
+      "url": "http://localhost:4000/uploads/1774360144467-WhatsApp_Image_2026-03-20_at_10.32.00_AM.jpeg"
+    },
+    "createdAt": "2026-03-24T13:49:04.476Z",
+    "time": "10:49 a. m.",
+    "readBy": [
+      "brisa"
+    ]
+  },
+  {
+    "id": "1774360155354",
+    "from": "brisa",
+    "to": "lucia",
+    "chatType": "private",
+    "chatId": "brisa:lucia:private",
+    "text": "😭",
+    "attachment": null,
+    "createdAt": "2026-03-24T13:49:15.354Z",
+    "time": "10:49 a. m.",
+    "readBy": [
+      "brisa"
+    ]
   }
 ]
