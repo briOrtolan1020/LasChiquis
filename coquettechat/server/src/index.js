@@ -16,6 +16,7 @@ const allowedOrigins = [
   "http://localhost:5174",
   "http://127.0.0.1:5173",
   "http://127.0.0.1:5174",
+  "http://192.168.1.171:5173",
   "https://coquettechat-client-chiquis.vercel.app",
 ];
 
@@ -74,7 +75,7 @@ app.post("/upload", upload.single("file"), (req, res) => {
         fileName: req.file.originalname,
         mimeType: req.file.mimetype,
         size: req.file.size,
-        url: `${baseUrl}/uploads/${req.file.filename}`,
+        url: `${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`,
       },
     });
   } catch (error) {
